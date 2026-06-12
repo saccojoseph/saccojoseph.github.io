@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>You're invited - bail.out</title>
 <meta name="description" content="You've been invited to a plan on bail.out. Open the app to RSVP.">
+<meta name="apple-itunes-app" content="app-id=6770131851">
 <style>
   :root {
     --bg: #0A0A0A; --surface: #141414; --border: #2A2A2A;
@@ -56,6 +57,7 @@
 
   <a class="cta" href="https://apps.apple.com/app/bail-out/id6770131851">Download bail.out</a>
   <a class="secondary" href="#" id="open-app">Already have it? Open the app</a>
+  <p style="font-size:13px; color:var(--text-3); margin-top:20px;">Taking you to the App Store…</p>
 
   <footer>
     <a href="https://saccojoseph.github.io/bail-out/">bail.out</a> ·
@@ -74,6 +76,12 @@
     } else {
       openLink.style.display = "none";
     }
+    // Auto-forward to the App Store after a brief beat. Users with the app
+    // installed never see this page (iOS opens the app directly), so anyone
+    // here almost certainly needs the download.
+    setTimeout(function () {
+      window.location.href = "https://apps.apple.com/app/bail-out/id6770131851";
+    }, 2500);
   })();
 </script>
 </body>
