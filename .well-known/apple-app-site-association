@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["7V2UWR9U98.com.josephsacco.bail-app"],
+        "components": [
+          {
+            "/": "/e/*",
+            "comment": "bail.out event invite links"
+          }
+        ]
+      }
+    ]
+  }
+}

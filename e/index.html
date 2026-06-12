@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're invited - bail.out</title>
+<meta name="description" content="You've been invited to a plan on bail.out. Open the app to RSVP.">
+<style>
+  :root {
+    --bg: #0A0A0A; --surface: #141414; --border: #2A2A2A;
+    --text: #FFFFFF; --text-2: #888888; --text-3: #555555;
+    --accent-start: #FF4458; --accent-end: #FF6B35;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased; line-height: 1.55;
+  }
+  .wrap {
+    max-width: 480px; margin: 0 auto; padding: 72px 24px;
+    text-align: center; min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .logo {
+    width: 96px; height: 96px; margin: 0 auto 24px;
+    background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(255, 68, 88, 0.35);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 48px; font-weight: 900; color: #fff;
+  }
+  h1 { font-size: 32px; font-weight: 900; letter-spacing: -1px; margin-bottom: 10px; }
+  p { color: var(--text-2); font-size: 16px; margin-bottom: 8px; }
+  .cta {
+    display: inline-block; margin-top: 28px; padding: 16px 32px;
+    background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+    color: #fff; border-radius: 14px; font-weight: 700; font-size: 17px;
+    text-decoration: none;
+    box-shadow: 0 12px 24px rgba(255, 68, 88, 0.3);
+  }
+  .secondary {
+    display: inline-block; margin-top: 16px; color: var(--text-2);
+    font-size: 14px; text-decoration: none;
+  }
+  footer { margin-top: 48px; font-size: 12px; color: var(--text-3); }
+  footer a { color: var(--text-3); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo">b.</div>
+  <h1>You're invited 🎉</h1>
+  <p>A friend added you to a plan on <strong style="color:#fff">bail.out</strong>.</p>
+  <p>Get the app to see the details and RSVP.</p>
+
+  <a class="cta" href="https://apps.apple.com/app/bail-out/id6770131851">Download bail.out</a>
+  <a class="secondary" href="#" id="open-app">Already have it? Open the app</a>
+
+  <footer>
+    <a href="https://saccojoseph.github.io/bail-out/">bail.out</a> ·
+    <a href="https://saccojoseph.github.io/bail-out/privacy.html">Privacy</a>
+  </footer>
+</div>
+<script>
+  // If the app is installed, the universal link opens it directly and this
+  // page is never shown. This fallback link retries via the custom scheme
+  // for users who landed here in a browser with the app installed.
+  (function () {
+    var id = new URLSearchParams(window.location.search).get("id");
+    var openLink = document.getElementById("open-app");
+    if (id) {
+      openLink.href = "bail://event/" + encodeURIComponent(id);
+    } else {
+      openLink.style.display = "none";
+    }
+  })();
+</script>
+</body>
+</html>
