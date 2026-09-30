@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support, Kitchen Table Rummy</title>
+<style>
+  :root {
+    --bg: #F4EEE2; --surface: #FFFFFF; --border: #E2D9C7;
+    --text: #1F2A24; --text-2: #4E5A53; --text-3: #7C857F;
+    --felt: #2F6B4F; --brass: #B8912F;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14201A; --surface: #1C2B23; --border: #2C3D33;
+      --text: #F4EEE2; --text-2: #C3CBC5; --text-3: #8A968F;
+      --felt: #7FC4A0; --brass: #D8B14F;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased; line-height: 1.6;
+  }
+  a { color: var(--felt); }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 56px 20px; }
+  .back { color: var(--text-3); font-size: 14px; margin-bottom: 28px; display: inline-block; text-decoration: none; }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-size: 36px; margin-bottom: 8px; }
+  .updated, .lede { color: var(--text-3); font-size: 14px; margin-bottom: 32px; }
+  .lede { font-size: 17px; color: var(--text-2); }
+  h2 { font-family: Georgia, "Times New Roman", serif; font-size: 22px; margin: 32px 0 10px; }
+  p, li { color: var(--text-2); font-size: 16px; margin-bottom: 12px; }
+  ul { padding-left: 22px; }
+  strong { color: var(--text); }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px; margin: 16px 0; }
+  .icon { width: 96px; height: 96px; border-radius: 22px; display: block; margin-bottom: 20px; }
+  footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-3); }
+  footer p { font-size: 13px; color: var(--text-3); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">← Kitchen Table Rummy</a>
+  <h1>Support</h1>
+  <p class="lede">Need a hand? Answers to common questions are below. For anything else, email <a href="mailto:kitchentablerummy@gmail.com">kitchentablerummy@gmail.com</a> and we'll get back to you.</p>
+
+  <h2>Playing online with family</h2>
+  <p>Everyone plays on their own iPhone or iPad. Make sure each person is signed in to Game Center (Settings → Game Center). Then tap <strong>New game</strong>, choose the rules, and tap <strong>Invite family and friends</strong>. Players take turns whenever they're ready, and the app lets them know when it's their turn.</p>
+
+  <h2>Playing on one phone</h2>
+  <p>Tap <strong>Pass and play</strong> on the home screen, enter everyone's names and deal. After each turn the app covers the cards and shows whose turn is next, so you can pass the phone around the table without peeking. This doesn't need Game Center.</p>
+
+  <h2>The rules</h2>
+  <ul>
+    <li>2 to 4 players, 7 cards each.</li>
+    <li>On your turn, draw from the stock or the discard pile, lay down sets (3 or 4 of a kind) or runs (3 or more in a row of one suit), lay off on any meld, then discard.</li>
+    <li>You can take any card in the discard pile along with every card above it, but you must lay down the card you reached for that same turn.</li>
+    <li>Aces can be low (A-2-3) or high (Q-K-A), but a run can't wrap around.</li>
+    <li>You have to discard to go out.</li>
+    <li>Cards you lay down count for you. Cards left in your hand count against you.</li>
+  </ul>
+
+  <h2>Scoring options</h2>
+  <p><strong>Standard:</strong> Aces 15 (1 when low in A-2-3), 10s and face cards 10, 2 to 9 face value.<br>
+  <strong>House:</strong> Aces 15, 10s and face cards 10, 2 to 9 are worth 5.<br>
+  <strong>Custom:</strong> set your own values.<br>
+  Play to a target score (500 by default) or for a set number of rounds.</p>
+
+  <h2>I'm not getting "your turn" notifications</h2>
+  <p>Check Settings → Notifications → Rummy, and make sure you're signed in to Game Center. Pull down on the home screen to refresh your games.</p>
+
+  <h2>Removing your data</h2>
+  <p>Your stats live only on your device, so deleting the app removes them. Online games are stored by Apple in Game Center. You can manage your Game Center account in Settings → Game Center.</p>
+  <footer>
+    <p><a href="index.html">Kitchen Table Rummy</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a></p>
+    <p>© 2026 Joseph Sacco</p>
+  </footer>
+</div>
+</body>
+</html>
