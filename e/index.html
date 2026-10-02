@@ -8,9 +8,9 @@
 <meta name="apple-itunes-app" content="app-id=6770131851">
 <style>
   :root {
-    --bg: #0A0A0A; --surface: #141414; --border: #2A2A2A;
-    --text: #FFFFFF; --text-2: #888888; --text-3: #555555;
-    --accent-start: #FF4458; --accent-end: #FF6B35;
+    --bg: #F7F3ED; --surface: #FFFFFF; --border: #E4DDD3;
+    --text: #212C28; --text-2: #59645F; --text-3: #717C76;
+    --accent-start: #BD453C; --accent-end: #D45A3E;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body {
@@ -27,18 +27,18 @@
     width: 96px; height: 96px; margin: 0 auto 24px;
     background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
     border-radius: 24px;
-    box-shadow: 0 20px 40px rgba(255, 68, 88, 0.35);
+    box-shadow: 0 16px 32px rgba(189, 69, 60, 0.18);
     display: flex; align-items: center; justify-content: center;
     font-size: 48px; font-weight: 900; color: #fff;
   }
-  h1 { font-size: 32px; font-weight: 900; letter-spacing: -1px; margin-bottom: 10px; }
+  h1 { font-size: 32px; font-weight: 800; letter-spacing: -1px; margin-bottom: 10px; }
   p { color: var(--text-2); font-size: 16px; margin-bottom: 8px; }
   .cta {
     display: inline-block; margin-top: 28px; padding: 16px 32px;
     background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
     color: #fff; border-radius: 14px; font-weight: 700; font-size: 17px;
     text-decoration: none;
-    box-shadow: 0 12px 24px rgba(255, 68, 88, 0.3);
+    box-shadow: 0 12px 24px rgba(189, 69, 60, 0.18);
   }
   .secondary {
     display: inline-block; margin-top: 16px; color: var(--text-2);
@@ -51,13 +51,13 @@
 <body>
 <div class="wrap">
   <div class="logo">b.</div>
-  <h1>You're invited 🎉</h1>
-  <p>A friend added you to a plan on <strong style="color:#fff">bail.out</strong>.</p>
-  <p>Get the app to see the details and RSVP.</p>
+  <h1>You're in the plan.</h1>
+  <p>A friend invited you to a plan on <strong>bail.out</strong>.</p>
+  <p>Open the app to see the details and respond.</p>
 
-  <a class="cta" href="https://apps.apple.com/app/bail-out/id6770131851">Download bail.out</a>
-  <a class="secondary" href="#" id="open-app">Already have it? Open the app</a>
-  <p style="font-size:13px; color:var(--text-3); margin-top:20px;">Taking you to the App Store…</p>
+  <a class="cta" href="https://apps.apple.com/app/apple-store/id6770131851?pt=128914829&amp;ct=InviteShare&amp;mt=8">Download bail.out</a>
+  <a class="secondary" href="#" id="open-app">Open this plan in bail.out</a>
+  <p style="font-size:13px; color:var(--text-3); margin-top:20px;">New here? After installing, return to this invitation and tap Open this plan.</p>
 
   <footer>
     <a href="https://saccojoseph.github.io/bail-out/">bail.out</a> ·
@@ -76,12 +76,6 @@
     } else {
       openLink.style.display = "none";
     }
-    // Auto-forward to the App Store after a brief beat. Users with the app
-    // installed never see this page (iOS opens the app directly), so anyone
-    // here almost certainly needs the download.
-    setTimeout(function () {
-      window.location.href = "https://apps.apple.com/app/bail-out/id6770131851";
-    }, 2500);
   })();
 </script>
 </body>
